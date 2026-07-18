@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ollama Linux Setup</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 2rem; background: #f9f9f9; color: #111; }
+    pre { background: #222; color: #f8f8f2; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    code { color: #d14; }
+    h1, h2 { margin-top: 1.5rem; }
+    section { margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Ollama Linux Setup</h1>
+
+  <section>
+    <h2>Install</h2>
+    <pre><code>curl -fsSL https://ollama.com/install.sh | sh</code></pre>
+    <p>Example installation output:</p>
+    <pre><code>Created symlink /etc/systemd/system/default.target.wants/ollama.service → /etc/systemd/system/ollama.service.
+>>> The Ollama API is now available at 127.0.0.1:11434.
+>>> Install complete. Run "ollama" from the command line.
+WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.</code></pre>
+  </section>
+
+  <section>
+    <h2>Check the service status</h2>
+    <pre><code>sudo systemctl status ollama</code></pre>
+  </section>
+
+  <section>
+    <h2>Sample model download</h2>
+    <pre><code>ollama run qwen2.5:1.5b</code></pre>
+  </section>
+
+  <section>
+    <h2>Sample shell interaction</h2>
+    <pre><code>writing manifest
+success
+>>> hello
+Hello! How can I help you today?
+
+>>> show me sample python hello world code
+print("Hello, World!")
+</code></pre>
+    <p>When run, this script will output <code>Hello, World!</code> to the console.</p>
+  </section>
+</body>
+</html>
