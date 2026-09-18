@@ -79,6 +79,36 @@
       margin-top: 1.5rem;
     }
 
+    .references-panel {
+      margin-top: 1.5rem;
+    }
+
+    .references-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .references-list a {
+      display: block;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fbfdff;
+      color: var(--accent);
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: 600;
+    }
+
+    .references-list a:hover,
+    .references-list a:focus-visible {
+      background: var(--accent-soft);
+    }
+
     .section-heading {
       display: flex;
       align-items: end;
@@ -214,29 +244,36 @@
         <div class="cards-window">
           <div class="cards" id="cards" tabindex="0">
             <article class="card">
-              <h3>Run Ollama on Linux</h3>
+              <h3>Ollama on Ubuntu</h3>
               <p>Set up a local Ollama environment and begin working with open models from the command line.</p>
-              <a href="ollama/setup_linux.html">Read the setup guide</a>
+              <a href="ollama/setup_linux.html">Read the Ollama on Ubuntu guide</a>
             </article>
-            <article class="card">
-              <h3>Knowledge base patterns</h3>
-              <p>Organize technical notes into focused, reusable references that are easy for teams to scan.</p>
-              <a href="README.md">Explore the project notes</a>
-            </article>
-            <article class="card">
-              <h3>System Security</h3>
+             <article class="card">
+              <h3>Secure Boot</h3>
               <p>Explore security-focused notes, practices, and references for safer software development.</p>
-              <a href="syssec/index.html">Open SysSec</a>
+              <a href="syssec/index.html">Read the Secure Boot guide</a>
             </article>
             <article class="card">
               <h3>Confidential Containers</h3>
               <p>Browse the COCO knowledge area for related guides, examples, and project documentation.</p>
-              <a href="coco/index.html">Open COCO</a>
+              <a href="coco/index.html">Read the Confidential Containers guide</a>
             </article>
           </div>
         </div>
         <button class="carousel-button" id="next-card" type="button" aria-label="Show next cards">&gt;</button>
       </div>
+    </section>
+
+    <section class="panel references-panel" aria-labelledby="references-title">
+      <div class="section-heading">
+        <h2 id="references-title">External references</h2>
+        <p>Useful sources and documentation</p>
+      </div>
+      <ul class="references-list">
+         <li><a href="https://github.com/confidential-containers" target="_blank" rel="noreferrer">Confidential Containers</a></li>
+        <li><a href="https://ollama.com/" target="_blank" rel="noreferrer">Ollama</a></li>
+        <li><a href="https://llm-coursework.github.io/" target="_blank" rel="noreferrer">LLM Coursework</a></li>
+      </ul>
     </section>
   </main>
   <script>
