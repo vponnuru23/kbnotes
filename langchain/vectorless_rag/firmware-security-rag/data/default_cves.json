@@ -1,0 +1,17 @@
+[
+  {
+    "component": "PCIe Controller",
+    "cve": "CVE-2026-1234",
+    "description": "Buffer overflow in DMA engine"
+  },
+  {
+    "component": "BIOS Firmware",
+    "cve": "CVE-2026-5678",
+    "description": "Privilege escalation via SMM handler"
+  },
+  {
+    "component": "Network Adapter Firmware",
+    "cve": "CVE-2026-9012",
+    "description": "Remote code execution in packet parser"
+  }
+]
